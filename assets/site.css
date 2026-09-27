@@ -1,0 +1,65 @@
+/* Last Time We Hugged: the app's design-system tokens (docs/design-system.md in the app repo).
+   Text colours are the app's muted and bronze, deepened in light mode to pass WCAG AA on paper. */
+:root {
+  --bg: #faf9f6;
+  --surface: #ffffff;
+  --text: #1a1a1a;
+  --muted: #625e57;
+  --accent: #8a6238;
+  --accent-soft: #f3ebe1;
+  --line: #eceae5;
+  color-scheme: light dark;
+}
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg: #151310;
+    --surface: #1e1b17;
+    --text: #f0ede6;
+    --muted: #a8a294;
+    --accent: #cfa06f;
+    --accent-soft: #2a231b;
+    --line: #292620;
+  }
+}
+* { box-sizing: border-box; }
+html { -webkit-text-size-adjust: 100%; }
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--text);
+  font: 17px/1.6 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+}
+.wrap { max-width: 720px; margin: 0 auto; padding: 32px 16px 64px; }
+header.site { display: flex; align-items: center; gap: 12px; margin-bottom: 40px; }
+header.site a { color: inherit; text-decoration: none; font-weight: 600; font-size: 18px; display: flex; align-items: center; gap: 10px; }
+.mark { width: 36px; height: 36px; color: var(--accent); flex: none; }
+nav.site { margin-left: auto; display: flex; gap: 18px; font-size: 15px; white-space: nowrap; }
+nav.site a { color: var(--muted); font-weight: 500; }
+nav.site a[aria-current="page"] { color: var(--accent); }
+h1 { font-size: 34px; line-height: 1.2; margin: 0 0 12px; letter-spacing: -0.01em; }
+h2 { font-size: 22px; margin: 40px 0 8px; }
+h3 { font-size: 18px; margin: 24px 0 4px; }
+p, li { color: var(--text); }
+.lede { font-size: 19px; color: var(--muted); margin-top: 0; }
+a { color: var(--accent); text-underline-offset: 3px; }
+ul { padding-left: 22px; }
+li + li { margin-top: 6px; }
+.card {
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: 16px;
+  padding: 20px 22px;
+  margin: 24px 0;
+}
+.card h2:first-child, .card h3:first-child { margin-top: 0; }
+.summary li::marker { color: var(--accent); }
+.pill { display: inline-block; background: var(--accent-soft); color: var(--accent); border-radius: 999px; padding: 2px 12px; font-size: 14px; font-weight: 600; }
+.email { font-size: 20px; font-weight: 600; word-break: break-all; }
+.muted { color: var(--muted); }
+footer.site { margin-top: 56px; padding-top: 20px; border-top: 1px solid var(--line); font-size: 14px; color: var(--muted); }
+footer.site a { color: var(--muted); }
+@media (max-width: 480px) {
+  h1 { font-size: 28px; }
+  header.site { flex-wrap: wrap; }
+  nav.site { margin-left: 0; width: 100%; }
+}
