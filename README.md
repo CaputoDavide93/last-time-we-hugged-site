@@ -4,7 +4,7 @@
 
 # 🤍 Last Time We Hugged site
 
-**Read what the Last Time We Hugged couples' journal keeps, and where, before you install it: privacy policy and support pages with no scripts, cookies or trackers**
+**Privacy policy and support pages for the Last Time We Hugged couples' journal app, static, no cookies or trackers**
 
 ![HTML](https://img.shields.io/badge/HTML-static-E34F26?logo=html5&logoColor=white)
 ![CSS](https://img.shields.io/badge/CSS-light_and_dark-1572B6?logo=css3&logoColor=white)
@@ -18,45 +18,11 @@
 
 ## ✨ Features
 
-This repository is the public website for **Last Time We Hugged**, a private
-journal for couples on iPhone, Apple Watch and Android. App stores need a
-privacy policy and a support page, and the app opens both from its Settings.
-This site is where they live. Open it at
-[caputodavide93.github.io/last-time-we-hugged-site](https://caputodavide93.github.io/last-time-we-hugged-site/).
+This is the website for **Last Time We Hugged**, a private journal for couples on iPhone, Apple Watch and Android. The app opens the privacy policy and the support page from its Settings, and the store listings link to them, so those addresses stay fixed.
 
-### Why it exists
+The privacy page says what stays on the phone, which permissions are optional, what syncing sends and where, and how to delete everything. The pages are in English only.
 
-An app where you write about arguments with your partner holds some of the most
-personal text you own. Before you install it you want to know what it keeps,
-who can read it and what leaves your phone. The answer has to sit on a page you
-can read on that phone, without a cookie banner, and the stores want the same
-page as a link.
-
-So the policy is a plain static page. It says what stays on the phone, which
-permissions are optional, what syncing sends and where, and how to delete
-everything.
-
-| | This site | A policy page on a generic site builder | A policy PDF |
-|---|---|---|---|
-| Scripts, cookies, analytics | None (a check fails the build if a script or form appears) | Often present | None |
-| Readable on a phone | Yes, one column from 375 px | Depends on the theme | Pinch and zoom |
-| Light and dark | Follows the reader's system setting | Depends on the theme | No |
-| Stable URLs the stores can keep | `/privacy/` and `/contact/` | Tied to the builder | Tied to a file name |
-| Review the change before it goes live | Pull request, then GitHub Pages publishes `main` | Edit in a web editor | Replace the file |
-
-The trade-off: the pages are in English only, and GitHub Pages may keep
-standard server logs for visitors. Both are stated on the site.
-
-### Install in 3 steps
-
-There is nothing to install to read the site. To preview or edit it you need
-Python 3 and a browser.
-
-1. **Clone:** `git clone https://github.com/CaputoDavide93/last-time-we-hugged-site.git && cd last-time-we-hugged-site`
-2. **Serve:** `make serve` (the same as `python3 -m http.server 8000`).
-3. **Open** <http://localhost:8000/>. Run `make check` before you push.
-
-### What you get
+Live at [caputodavide93.github.io/last-time-we-hugged-site](https://caputodavide93.github.io/last-time-we-hugged-site/).
 
 | | Page | What it is |
 |---|---|---|
@@ -67,6 +33,8 @@ Python 3 and a browser.
 | 🚫 | No tracking | No scripts, forms, cookies or analytics, and a check that fails if one appears |
 | 🔎 | Findable | Canonical URLs, a sitemap, `robots.txt` and `llms.txt` |
 | 🧪 | Self-checking | `make check` verifies every page exists, every local link resolves, metadata is present and the support address is the only one |
+
+The pages are plain HTML and CSS: no scripts, forms, cookies or analytics, and a check fails the build if one appears. The pages are in English only. GitHub Pages may keep standard server logs for visitors, and the privacy page says so.
 
 ---
 
@@ -107,15 +75,16 @@ How it is built is in [docs/how-it-works.md](docs/how-it-works.md).
 
 ## 🚀 Quick Start
 
+You need Python 3 and a browser. There is no build step, and `make check` uses only the standard library.
+
 ```bash
+git clone https://github.com/CaputoDavide93/last-time-we-hugged-site.git
+cd last-time-we-hugged-site
 make serve     # preview at http://localhost:8000
-make check     # page, link, metadata and diagram checks, the same as CI
+make check     # the same checks CI runs
 ```
 
-GitHub Pages publishes the `main` branch root, so a merged pull request is the
-release. The privacy page must stay true to the app's own privacy document:
-change the app first, then that document and this page together, with a new
-effective date, before the store listings. More in [docs/setup.md](docs/setup.md).
+Editing a page, retaking the images and what each check covers are in [docs/setup.md](docs/setup.md).
 
 ---
 
@@ -150,6 +119,16 @@ last-time-we-hugged-site/
 ├── .nojekyll              # serve files as they are
 └── .gitignore
 ```
+
+---
+
+## 📦 Deployment
+
+GitHub Pages serves the root of `main`, so a merged pull request is the release.
+CI runs `make check` on every pull request and on every push to `main`. The
+privacy page must stay true to the app's own privacy document: change the app
+first, then that document and this page together, with a new effective date,
+before the store listings.
 
 ---
 
