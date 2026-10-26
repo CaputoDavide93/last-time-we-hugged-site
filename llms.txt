@@ -1,0 +1,25 @@
+# Last Time We Hugged site
+
+> The public website for Last Time We Hugged, a private journal for couples on iPhone, Apple Watch and Android. It holds the app's privacy policy and its contact and support page, in English. Static HTML and CSS served by GitHub Pages, with no scripts, forms, cookies or analytics. MIT licensed.
+
+Key facts:
+
+- Live site: https://caputodavide93.github.io/last-time-we-hugged-site/
+- Privacy policy: https://caputodavide93.github.io/last-time-we-hugged-site/privacy/
+- What the privacy policy says about the app: no account, no servers, no analytics, ads or tracking, no AI. The journal stays on the phone unless the user syncs with a partner, turns on iCloud sync on iPhone, or sends a file themselves. The app is free, with no purchases or ads.
+- Read the policy itself for the exact wording and its effective date; this summary is not a substitute.
+- Contact and support page: https://caputodavide93.github.io/last-time-we-hugged-site/contact/ (the support address is on that page).
+- Built from plain files: one index.html per page, one shared stylesheet with light and dark colours. No build step.
+- Tested: layout and screenshots in Chromium on macOS, light and dark. Safari, Firefox and screen readers are unverified.
+- Preview and check locally: `make serve`, then `make check` (needs Python 3).
+- Trade-off: pages are English only, and GitHub Pages may keep standard server logs.
+- Independent project by Davide Caputo.
+
+## Docs
+
+- [README](https://github.com/CaputoDavide93/last-time-we-hugged-site/blob/main/README.md): what the site is, why it exists, install, tested on, repo structure
+- [Setup](https://github.com/CaputoDavide93/last-time-we-hugged-site/blob/main/docs/setup.md): preview, edit a page, publish
+- [How it works](https://github.com/CaputoDavide93/last-time-we-hugged-site/blob/main/docs/how-it-works.md): pages, URLs, styles, checks
+- [FAQ](https://github.com/CaputoDavide93/last-time-we-hugged-site/blob/main/docs/faq.md): cookies, reuse, reporting a problem
+- [Troubleshooting](https://github.com/CaputoDavide93/last-time-we-hugged-site/blob/main/docs/troubleshooting.md): symptoms and fixes
+- [Contributing](https://github.com/CaputoDavide93/last-time-we-hugged-site/blob/main/CONTRIBUTING.md)

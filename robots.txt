@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://caputodavide93.github.io/last-time-we-hugged-site/sitemap.xml
