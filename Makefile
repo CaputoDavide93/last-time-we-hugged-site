@@ -19,5 +19,6 @@ screenshots: ## Retake docs/assets/screenshots/ from the served site (not CI)
 	.venv-screenshots/bin/python -m playwright install chromium
 	.venv-screenshots/bin/python tools/screenshots/take_screenshots.py
 
-social: ## Redraw docs/assets/brand/icon.png and social-preview.png (not CI)
-	.venv-screenshots/bin/python tools/screenshots/social_preview.py
+social: ## Redraw docs/assets/social-preview.png in the shared layout (needs Google Chrome and Pillow, not CI)
+	python3 tools/brand/brand_kit.py social --name "Last Time We Hugged site" --tagline "Privacy policy and contact pages for a couples' journal that stays on your phone" --chip "Privacy policy" --chip "Light and dark" --chip "No scripts or cookies" --chip "Static HTML" \
+		--icon docs/assets/brand/icon.png --hue 30 --out docs/assets/social-preview.png

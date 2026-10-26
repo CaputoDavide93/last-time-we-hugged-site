@@ -140,7 +140,7 @@ last-time-we-hugged-site/
 ├── assets/                # 🎨 site.css and mark.svg (also the favicon)
 ├── docs/                  # 📚 setup, how it works, FAQ, troubleshooting
 │   └── assets/            # 🖼️ diagram, screenshots, brand icon, social preview
-├── tools/                 # 🔧 check_site.py, gen_diagram.py, screenshots/
+├── tools/                 # 🔧 check_site.py, gen_diagram.py, brand/, screenshots/
 ├── .github/workflows/     # 🤖 ci.yml runs make check
 ├── Makefile               # ⚙️ check, serve, diagram, screenshots, social
 ├── llms.txt               # 🤖 the site in one plain-text page for search tools
