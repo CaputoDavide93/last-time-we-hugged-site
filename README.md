@@ -1,6 +1,6 @@
 <div align="center">
 
-<img src="docs/assets/brand/icon.png" width="96" alt="The Last Time We Hugged mark: two small heads above a heart, drawn as a bronze outline on warm white">
+<img src="docs/assets/brand/icon.png" width="96" alt="The Last Time We Hugged app icon: two small heads above a heart, one outline in black and one in bronze, on warm white">
 
 # 🤍 Last Time We Hugged site
 
@@ -137,7 +137,7 @@ last-time-we-hugged-site/
 ├── index.html             # 🏠 what the app is, three promises
 ├── privacy/index.html     # 🔒 privacy policy
 ├── contact/index.html     # 💬 contact and common questions
-├── assets/                # 🎨 site.css and mark.svg (also the favicon)
+├── assets/                # 🎨 site.css, the app icon at four sizes (favicon, touch icon, header) and mark.svg
 ├── docs/                  # 📚 setup, how it works, FAQ, troubleshooting
 │   └── assets/            # 🖼️ diagram, screenshots, brand icon, social preview
 ├── tools/                 # 🔧 check_site.py, gen_diagram.py, brand/, screenshots/
